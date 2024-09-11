@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from myapp import views
 
-
+    
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
@@ -28,5 +28,8 @@ urlpatterns = [
     path('post/<int:id>/',views.post),
     path('contact/',views.contact),
     path('postblog/',views.postblog),
+    path('login/',views.loginhandle),
+    path('signup/',views.signuphandle),
+    path('logout/',views.logouthandle)
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

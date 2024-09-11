@@ -1,3 +1,4 @@
+{% extends "index.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +34,9 @@ https://templatemo.com/tm-553-xtra-blog
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
-                    <li class="tm-nav-item"><a href="/post/" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="/postblog/" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
-                        Single Post
+                        Post Blog
                     </a></li>
                     <li class="tm-nav-item"><a href="/about/" class="tm-nav-link">
                         <i class="fas fa-users"></i>
@@ -72,7 +73,6 @@ https://templatemo.com/tm-553-xtra-blog
             <div class="row tm-row">
                 <div class="col-12">
                     <form method="GET" class="form-inline tm-mb-80 tm-search-form">  
-                        {% csrf_token %}              
                         <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
                         <button class="tm-search-button" type="submit">
                             <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>

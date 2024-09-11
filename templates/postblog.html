@@ -1,3 +1,5 @@
+{% extends "index.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,18 +77,12 @@
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
             
-            <button type="submit">Submit</button>
+            <button type="submit">Post</button>
         </form>
     </div>
 </div>
 
-<script>
-    // Set the current date as the default value for the date input
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('date').value = today;
-    });
-</script>
+
 
 </body>
 </html>
