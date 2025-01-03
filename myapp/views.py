@@ -34,7 +34,7 @@ def post(request,id):
     context = {
     'mainblog':post_data[0]
     }
-    return render(request,'postblog.html',context)
+    return render(request,'post.html',context)
 
 
 def postblog(request):
@@ -46,6 +46,14 @@ def postblog(request):
         Blog(image=image,title=title,description=description,date=date).save()
         return HttpResponse("successfully saved!!!!!!")
     return render(request,'postblog.html')
+
+def postdescription(request,id):
+    blog = Blog.objects.filter(id=id)
+    context = {
+        'BLOG' : blog[0]
+
+    }
+    return render(request,'postdescription.html',context)
 
 
 def loginhandle(request):

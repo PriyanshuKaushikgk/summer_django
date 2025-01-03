@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 {% load static %}
+{% block outlet %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
             background-color: #f4f4f4;
         }
         .container {
-            width: 80%;
+            width: 50%;
             margin: auto;
             overflow: hidden;
         }
@@ -86,3 +87,4 @@
 
 </body>
 </html>
+{% endblock outlet %}

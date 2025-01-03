@@ -1,5 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
 	<link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/templatemo-xtra-blog.css' %}" rel="stylesheet">
+    <link href="{% static 'css/templatemo-xtra-blog.css'%}" rel="stylesheet">
 <!--
     
 TemplateMo 553 Xtra Blog
@@ -17,6 +19,13 @@ TemplateMo 553 Xtra Blog
 https://templatemo.com/tm-553-xtra-blog
 
 -->
+<style>
+    .tm-post-full{
+        {% comment %} margin-left:36%; {% endcomment %}
+        
+        
+    }
+</style>
 </head>
 <body>
 	<header class="tm-header" id="tm-header">
@@ -68,9 +77,11 @@ https://templatemo.com/tm-553-xtra-blog
         </div>
     </header>
     <div class="container-fluid">
-        <main class="tm-main">
+
+        <main class="tm-main " >
+            
             <!-- Search form -->
-            <div class="row tm-row">
+            <div class="row tm-row ">
                 <div class="col-12">
                     <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
                         <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
@@ -80,16 +91,18 @@ https://templatemo.com/tm-553-xtra-blog
                     </form>
                 </div>                
             </div>            
-            <div class="row tm-row">
+            <div class="row tm-row"  >
                 <hr>
                 <div class="col-12">
                     <hr class="tm-hr-primary tm-mb-55">
                     <img src="/media/{{mainblog.image}}" alt="Not Found">
                 </div>
             </div>
+            {% block outlet %}
+            
             <div class="row tm-row">
                 <div class="col-lg-8 tm-post-col">
-                    <div class="tm-post-full">                    
+                    <div class="tm-post-full" style="margin-left:50%; width: 100%;">                    
                         <div class="mb-4">
                             <h2 class="pt-2 tm-color-primary tm-post-title">{{mainblog.title}}</h2>
                             <p class="tm-mb-40">June 16, 2020 posted by Admin Nat</p>
@@ -98,7 +111,6 @@ https://templatemo.com/tm-553-xtra-blog
                             </p>
                             <span class="d-block text-right tm-color-primary">Creative . Design . Business</span>
                         </div>
-                        
                         <!-- Comments -->
                         <div>
                             <h2 class="tm-color-primary tm-post-title">Comments</h2>
@@ -161,3 +173,5 @@ https://templatemo.com/tm-553-xtra-blog
     <script src="{% static 'js/templatemo-script.js' %}"></script>
 </body>
 </html>
+{% endblock outlet %}   
+

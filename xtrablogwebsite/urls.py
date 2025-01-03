@@ -28,6 +28,7 @@ urlpatterns = [
     path('post/<int:id>/',views.post),
     path('contact/',views.contact),
     path('postblog/',views.postblog),
+    path('description/<int:id>/ ',views.postdescription),
     path('login/',views.loginhandle),
     path('signup/',views.signuphandle),
     path('logout/',views.logouthandle)

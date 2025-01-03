@@ -19,6 +19,7 @@ https://templatemo.com/tm-553-xtra-blog
 -->
 </head>
 <body>
+    {% block outlet %}
 	<header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
@@ -67,8 +68,11 @@ https://templatemo.com/tm-553-xtra-blog
             </p>
         </div>
     </header>
+
+
     <div class="container-fluid">
-        <main class="tm-main">
+        <main class="tm-main ">
+           
             <!-- Search form -->
             <div class="row tm-row">
                 <div class="col-12">
@@ -185,3 +189,4 @@ https://templatemo.com/tm-553-xtra-blog
     <script src="{% static 'js/templatemo-script.js' %}"></script>
 </body>
 </html>
+{% endblock outlet %}

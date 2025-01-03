@@ -67,8 +67,9 @@ https://templatemo.com/tm-553-xtra-blog
             </p>
         </div>
     </header>
+    {% block outlet %}
     <div class="container-fluid">
-        <main class="tm-main">
+        <main class="tm-main ">
             <!-- Search form -->
             <div class="row tm-row">
                 <div class="col-12">
@@ -216,3 +217,4 @@ https://templatemo.com/tm-553-xtra-blog
     <script src="{% static 'js/templatemo-script.js' %}"></script>
 </body>
 </html>
+{% endblock outlet %}
